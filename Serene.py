@@ -19,8 +19,8 @@ def under_pros_directory() -> bool:
 
 
 if __name__ == '__main__':
-    # if not under_pros_directory():
-    #     exit()
+    if not under_pros_directory():
+        exit()
     if not sys.argv[1] or sys.argv[1] != 'compile':
         print("Invalid Command [ERROR]")
         exit()
