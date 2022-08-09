@@ -24,8 +24,7 @@ if __name__ == '__main__':
     if not sys.argv[1] or sys.argv[1] != 'compile':
         print("Invalid Command [ERROR]")
         exit()
-    if not sys.argv[2] or not path.exists(sys.argv[2]) or not path.isfile(sys.argv[2]) or not sys.argv[2][
-                                                                                              -4:] == '.lua':
+    if not sys.argv[2] or not path.exists(sys.argv[2]) or not path.isfile(sys.argv[2]) or not sys.argv[2][-4:] == '.lua':
         print("Invalid File")
         exit()
     compile_file(sys.argv[2], os.path.join(os.getcwd(), "src" + os.path.sep + "serene_bytecode.h"))
